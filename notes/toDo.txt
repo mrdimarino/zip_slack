@@ -1,0 +1,6 @@
+Convert backend from chatroom to channel based system
+
+Attach Will's frontend
+
+Save messages and users into database
+
