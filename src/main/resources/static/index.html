@@ -5,6 +5,7 @@
     <title>ZipSlack</title>
     <link rel="stylesheet" href="main.css" />
 </head>
+<body>
 <div id="username-page">
     <div class="username-page-container">
         <h1 class="title">Welcome to ZipSlack!</h1>
@@ -35,12 +36,12 @@
 
     <div class="channel-messages">
         <div class="channel-name">Current Channel</div>
-        <ul class="messsageDisplay">
+        <div class = "connecting">Connecting... </div>
 
-        </ul>
+        <ul id="messageDisplay"></ul>
 
         <form class="message-box">
-        <input type="text" id="message-input" autocomplete="off" placeholder="Type here to message..."><button id="send-button" type="submit">Send</button>
+        <input type="text" id="message-input" autocomplete="off" placeholder="Type your message here..."><button id="send-button" type="submit">Send</button>
         </form>
     </div>
 
@@ -54,4 +55,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 <script src="main.js"></script>
+</body>
 </html>
