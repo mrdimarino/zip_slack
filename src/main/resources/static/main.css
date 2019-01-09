@@ -1,0 +1,128 @@
+    html{
+        max-height: 100%;
+        font-family:"helvetica"
+    }
+
+    #username-page {
+        text-align: center;
+    }
+
+    .hidden{
+        display:none;
+    }
+
+    .username-page-container {
+        background-color: #3EACA8;
+        box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+        border-radius: 2px;
+        width: 100%;
+        max-width: 500px;
+        display: inline-block;
+        margin-top: 42px;
+        vertical-align: middle;
+        position: relative;
+        padding: 35px 55px 35px;
+        min-height: 250px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        margin-top: -160px;
+    }
+
+    .username-page-container .username-submit {
+        margin-top: 10px;
+    }
+
+    .slack-container {
+        display:flex;
+        height:100vh;
+    }
+    .room-list{
+        color: #c8c7c8;
+        background-color: #3EACA8;
+        text-align: center;
+        padding-top: 35px;
+        width: 75px;
+        max-width:120px;
+        border-right: #444444 solid 1px;
+    }
+    .channel-list {
+        overflow: scroll;
+        height: 100%;
+        color: #c8c7c8;
+        background-color: #547A82;
+        padding-top: 35px;
+        text-align: center;
+        width:220px;
+        border-right: #444444 solid 1px;
+    }
+    .channel-name{
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .channel-messages {
+        color: #5A5050;
+        background-color: whitesmoke;
+        flex-grow: 3;
+        border-right: #444444 solid 1px;
+    }
+    #message-input{
+        width: 670px;
+    }
+    .message-box{
+        float: left;
+        padding: 20px;
+    }
+    .members-list {
+        color: #c8c7c8;
+        background-color: #3F6A8A;
+        padding-top: 35px;
+        width:220px;
+        text-align: center;
+    }
+    .message{
+        max-width: 750px;
+        padding-top: 10px;
+        padding-left: 30px;
+    }
+    .messsages{
+        overflow: scroll;
+        height: 550px;
+    }
+    .channels{
+        height: 95%;
+        overflow: scroll;
+    }
+    .room-list-header{
+        padding-bottom: 5px;
+    }
+    .rooms{
+        overflow: scroll;
+        height: 95%;
+    }
+    .room{
+        padding: 10px;
+        background-color: yellow;
+    }
+    .channel{
+        padding-top: 10px;
+    }
+    .channel:hover{
+        color: #ffffff;
+    }
+    .members{
+        height: 95%;
+        overflow-x: scroll;
+    }
+    .member{
+        padding-top: 10px;
+    }
+    .member:hover{
+        color: #ffffff;
+    }
+    .column{
+        width:20%;
+    }

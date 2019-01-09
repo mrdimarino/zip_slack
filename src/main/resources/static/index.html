@@ -2,52 +2,56 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Spring Boot WebSocket Chat Application</title>
-    <link rel="stylesheet" href="/css/main.css" />
+    <title>ZipSlack</title>
+    <link rel="stylesheet" href="main.css" />
 </head>
-<body>
-<noscript>
-    <h2>Sorry! Your browser doesn't support Javascript</h2>
-</noscript>
-
 <div id="username-page">
     <div class="username-page-container">
-        <h1 class="title">Type your username</h1>
+        <h1 class="title">Welcome to ZipSlack!</h1>
+        <h3>Type Your Username Below</h3>
         <form id="usernameForm" name="usernameForm">
             <div class="form-group">
                 <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
             </div>
             <div class="form-group">
-                <button type="submit" class="accent username-submit">Start Chatting</button>
+                <button type="submit" class="accent username-submit">Click here to enter chat!</button>
             </div>
         </form>
     </div>
 </div>
+<div id="slackApp" class="hidden">
+<div class="slack-container row">
+    <div class="room-list">
+        <div class="room-list-header">Rooms</div>
+        <div class="rooms">
+            <div class="room">ZCW</div>
+        </div>
+    </div>
 
-<div id="chat-page" class="hidden">
-    <div class="chat-container">
-        <div class="chat-header">
-            <h2>Spring WebSocket Chat Demo</h2>
-        </div>
-        <div class="connecting">
-            Connecting...
-        </div>
-        <ul id="messageArea">
+    <div class="channel-list">
+        <div class="channel-list-header">Channel List</div>
+
+    </div>
+
+    <div class="channel-messages">
+        <div class="channel-name">Current Channel</div>
+        <ul class="messsageDisplay">
 
         </ul>
-        <form id="messageForm" name="messageForm">
-            <div class="form-group">
-                <div class="input-group clearfix">
-                    <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
-                    <button type="submit" class="primary">Send</button>
-                </div>
-            </div>
+
+        <form class="message-box">
+        <input type="text" id="message-input" autocomplete="off" placeholder="Type here to message..."><button id="send-button" type="submit">Send</button>
         </form>
     </div>
-</div>
 
+    <div class="members-list">
+        <div class="members-list-header">Members List</div>
+        <div class="members">
+        </div>
+    </div>
+</div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-<script src="/js/main.js"></script>
-</body>
+<script src="main.js"></script>
 </html>
