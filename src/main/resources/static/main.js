@@ -1,11 +1,11 @@
 'use strict';
 
 var usernamePage = document.querySelector('#username-page');
-var chatPage = document.querySelector('#chat-page');
+var chatPage = document.querySelector('#slackApp');
 var usernameForm = document.querySelector('#usernameForm');
-var messageForm = document.querySelector('#messageForm');
-var messageInput = document.querySelector('#message');
-var messageArea = document.querySelector('#messageArea');
+var messageForm = document.querySelector('.message-box');
+var messageInput = document.querySelector('#message-input');
+var messageArea = document.querySelector('.messageDisplay');
 var connectingElement = document.querySelector('.connecting');
 
 var stompClient = null;
