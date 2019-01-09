@@ -88,10 +88,39 @@
         padding-top: 10px;
         padding-left: 30px;
     }
-    .messsages{
-        overflow: scroll;
+    #messageDisplay ul{
         height: 550px;
+        list-style-type: none;
+        background-color: #FFF;
+        margin: 0;
+        overflow: auto;
+        overflow-y: scroll;
+        padding: 0 20px 0px 20px;
+
     }
+
+    #messageDisplay li {
+        list-style-type: none;
+        line-height: 1.5rem;
+        padding: 10px 20px;
+        margin: 0;
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    #messageDisplay .event-message{
+        font-size: 14px;
+        word-wrap: break-word;
+        text-align: center;
+
+    }
+
+    #messageDisplay .chat-message{
+        font-size: 14px;
+        word-wrap: break-word;
+        text-align: left;
+    }
+
+
     .channels{
         height: 95%;
         overflow: scroll;
