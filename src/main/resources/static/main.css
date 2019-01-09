@@ -105,18 +105,7 @@
         padding: 10px 20px;
         margin: 0;
         border-bottom: 1px solid #f4f4f4;
-    }
-
-    #messageDisplay .event-message{
-        font-size: 14px;
-        word-wrap: break-word;
-        text-align: center;
-
-    }
-
-    #messageDisplay .chat-message{
-        font-size: 14px;
-        word-wrap: break-word;
+        font-size: 12px;
         text-align: left;
     }
 

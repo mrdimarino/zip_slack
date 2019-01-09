@@ -66,30 +66,20 @@ function onMessageReceived(payload) {
 
     var messageElement = document.createElement('li');
 
-    if(message.type === 'JOIN') {
-        messageElement.classList.add('event-message');
-        message.content = message.sender + ' joined!';
-    } else if (message.type === 'LEAVE') {
-        messageElement.classList.add('event-message');
-        message.content = message.sender + ' has left the building!';
-    } else {
+    if(message.type == 'CHAT') {
         messageElement.classList.add('chat-message');
 
-        var usernameElement = document.createElement('span');
+
         var usernameText = document.createTextNode(message.sender + ': ');
-        usernameElement.appendChild(usernameText);
-        messageElement.appendChild(usernameElement);
+        messageElement.appendChild(usernameText);
+
+
+        var messageText = document.createTextNode(message.content);
+        messageElement.appendChild(messageText);
+
+        messageArea.appendChild(messageElement);
+        messageArea.scrollTop = messageArea.scrollHeight;
     }
-
-    var textElement = document.createElement('p');
-    var messageText = document.createTextNode(message.content);
-    textElement.appendChild(messageText);
-    messageElement.appendChild(usernameElement);
-
-    messageElement.appendChild(textElement);
-
-    messageArea.appendChild(messageElement);
-    messageArea.scrollTop = messageArea.scrollHeight;
 }
 
 
