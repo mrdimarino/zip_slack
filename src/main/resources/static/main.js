@@ -7,6 +7,7 @@ var messageForm = document.querySelector('.message-box');
 var messageInput = document.querySelector('#message-input');
 var messageArea = document.querySelector('#messageDisplay');
 var connectingElement = document.querySelector('.connecting');
+var memberlist = document.querySelector('#members')
 
 var stompClient = null;
 var username = null;
@@ -30,13 +31,15 @@ function connect(event) {
 
 function onConnected() {
     stompClient.subscribe('/topic/public', onMessageReceived);
-
+    stompClient.subscribe('/topic/public', addMemberToList);
     stompClient.send("/app/chat.addUser",
         {},
         JSON.stringify({sender: username, type: 'JOIN'})
     )
 
     connectingElement.classList.add('hidden');
+
+
 }
 
 
@@ -81,6 +84,19 @@ function onMessageReceived(payload) {
         messageArea.scrollTop = messageArea.scrollHeight;
     }
 }
+
+function addMemberToList(payload){
+    var messageSender = JSON.parse(payload.body);
+
+    if(messageSender.type == 'JOIN'){
+        var memberListText = document.createElement('li');
+        var memberName = document.createTextNode(messageSender.sender);
+        memberListText.appendChild(memberName);
+        memberlist.appendChild(memberListText);
+
+    }
+}
+
 
 
 usernameForm.addEventListener('submit', connect, true);

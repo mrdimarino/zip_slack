@@ -88,13 +88,26 @@
         padding-top: 10px;
         padding-left: 30px;
     }
+
+    #members ul{
+        height: 95%;
+        overflow-x: scroll;
+    }
+
+    #members li{
+        list-style-type: none;
+        font-size: 12px;
+        text-align: left;
+        line-height: 1.5rem;
+        padding: 10px 20px;
+        margin: 0;
+    }
+
     #messageDisplay ul{
         height: 550px;
         list-style-type: none;
         background-color: #FFF;
         margin: 0;
-        overflow: auto;
-        overflow-y: scroll;
         padding: 0 20px 0px 20px;
 
     }
@@ -131,14 +144,9 @@
     .channel:hover{
         color: #ffffff;
     }
-    .members{
-        height: 95%;
-        overflow-x: scroll;
-    }
-    .member{
-        padding-top: 10px;
-    }
-    .member:hover{
+
+
+    #member:hover{
         color: #ffffff;
     }
     .column{
